@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtArchivos = new System.Windows.Forms.TextBox();
             this.btnCargarArchivo = new System.Windows.Forms.Button();
+            this.txtArchivos = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnGenerarNom = new System.Windows.Forms.Button();
@@ -51,22 +51,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccione el archivo de texto";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre del archivo";
-            // 
-            // txtArchivos
-            // 
-            this.txtArchivos.Location = new System.Drawing.Point(24, 41);
-            this.txtArchivos.Name = "txtArchivos";
-            this.txtArchivos.Size = new System.Drawing.Size(610, 20);
-            this.txtArchivos.TabIndex = 1;
-            // 
             // btnCargarArchivo
             // 
             this.btnCargarArchivo.Location = new System.Drawing.Point(640, 39);
@@ -76,6 +60,22 @@
             this.btnCargarArchivo.Text = "Cargar Archivo";
             this.btnCargarArchivo.UseVisualStyleBackColor = true;
             this.btnCargarArchivo.Click += new System.EventHandler(this.btnCargarArchivo_Click);
+            // 
+            // txtArchivos
+            // 
+            this.txtArchivos.Location = new System.Drawing.Point(24, 41);
+            this.txtArchivos.Name = "txtArchivos";
+            this.txtArchivos.Size = new System.Drawing.Size(610, 20);
+            this.txtArchivos.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre del archivo";
             // 
             // openFileDialog1
             // 

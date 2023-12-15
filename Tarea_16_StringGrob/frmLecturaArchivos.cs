@@ -18,6 +18,7 @@ namespace Tarea_16_StringGrob
         const int MAX = 1000;
         string[] arrayNombres;
         int totalElementos;
+        
         public frmLecturaArchivos()
         {
             InitializeComponent();
@@ -49,7 +50,9 @@ namespace Tarea_16_StringGrob
                     this.txtArchivos.Text = openFileDialog1.FileName;
                     this.LeerArchivoTexto(this.txtArchivos.Text);
                 }
-            }
+
+
+        }
         private void LeerArchivoTexto(string nombreArchivo)
         {
             String line;
@@ -99,7 +102,13 @@ namespace Tarea_16_StringGrob
 
         private void btnGenerarNom_Click(object sender, EventArgs e)
         {
-            this.lblNombre.Text = arrayNombres[1];
+            Random random = new Random();
+            int indiceAleatorio = random.Next(0,458);
+
+            this.lblNombre.Text = $"EL NOMBRE SELECCIONADO ES :{ arrayNombres[indiceAleatorio]}";
+
+
         }
+
     }
 }
