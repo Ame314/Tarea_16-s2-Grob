@@ -21,6 +21,9 @@ namespace Tarea_16_StringGrob
         int totalElementos;
         private TextBox[] cuadrosNombre;
 
+
+
+
         public frmLecturaArchivos()
         {
             InitializeComponent();
@@ -94,6 +97,7 @@ namespace Tarea_16_StringGrob
             {
                 Console.WriteLine("Executing finally block.");
             }
+
            
         }
 
@@ -124,6 +128,7 @@ namespace Tarea_16_StringGrob
             for (int i = 1; i <= 10; i++)
             {
                 string textBoxName = "textBox" + i;
+
                 TextBox textBox = Controls.Find(textBoxName, true).FirstOrDefault() as TextBox;
 
                 if (textBox != null)
@@ -159,6 +164,7 @@ namespace Tarea_16_StringGrob
 
             this.lblNombre.Text = $"Nombre Selecionado es. {arrayNombres[indiceAleatorio]}";
         }
+
 
     }
        
