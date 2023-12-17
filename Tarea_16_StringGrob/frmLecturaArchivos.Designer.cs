@@ -36,6 +36,8 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnGenerarNom = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCaracterUsuario = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,11 +112,29 @@
             this.lblNombre.TabIndex = 3;
             this.lblNombre.Text = "EL NOMBRE SELECCIONADO ES :";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(33, 212);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Ingresa una Letra:";
+            // 
+            // txtCaracterUsuario
+            // 
+            this.txtCaracterUsuario.Location = new System.Drawing.Point(163, 209);
+            this.txtCaracterUsuario.Name = "txtCaracterUsuario";
+            this.txtCaracterUsuario.Size = new System.Drawing.Size(58, 20);
+            this.txtCaracterUsuario.TabIndex = 5;
+            // 
             // frmLecturaArchivos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtCaracterUsuario);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnGenerarNom);
             this.Controls.Add(this.btnCerrar);
@@ -138,5 +158,7 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnGenerarNom;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCaracterUsuario;
     }
 }

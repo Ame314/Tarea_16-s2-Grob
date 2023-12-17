@@ -16,7 +16,7 @@ namespace Tarea_16_StringGrob
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmIngresaDatos());
+            Application.Run(new frmLecturaArchivos());
         }
     }
 }
