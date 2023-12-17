@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.IO;
 using System.Drawing.Text;
+using Microsoft.VisualBasic;
 
 namespace Tarea_16_StringGrob
 {
@@ -18,7 +19,8 @@ namespace Tarea_16_StringGrob
         const int MAX = 1000;
         string[] arrayNombres;
         int totalElementos;
-        
+        private TextBox[] cuadrosNombre;
+
         public frmLecturaArchivos()
         {
             InitializeComponent();
@@ -99,16 +101,66 @@ namespace Tarea_16_StringGrob
         {
             this.Close();
         }
-
+        //Opciones de colores
+        List<Color> coloresDisponibles = new List<Color>
+{
+            Color.LightGray,
+            Color.LightBlue,
+            Color.LightCoral,
+            Color.LightGreen,
+            Color.LightPink,
+            Color.LightSalmon,
+            Color.LightSkyBlue
+};
         private void btnGenerarNom_Click(object sender, EventArgs e)
         {
-            Random random = new Random();
-            int indiceAleatorio = random.Next(0,458);
+            Random random = new Random();//genera números aleatorios sin semilla
+            int indiceAleatorio = random.Next(0, 458);//los números aleatorios de generan de 0 a 557
+            string nombre = arrayNombres[indiceAleatorio];
 
-            this.lblNombre.Text = $"EL NOMBRE SELECCIONADO ES :{ arrayNombres[indiceAleatorio]}";
+            this.lblNombre.Text = $"EL NOMBRE SELECCIONADO ES :{arrayNombres[indiceAleatorio]}";//muestra en el lbl el nombre
+            Color colorAleatorio = coloresDisponibles[random.Next(coloresDisponibles.Count)];
 
+            for (int i = 1; i <= 10; i++)
+            {
+                string textBoxName = "textBox" + i;
+                TextBox textBox = Controls.Find(textBoxName, true).FirstOrDefault() as TextBox;
 
+                if (textBox != null)
+                {
+                    textBox.Clear();
+
+                    if (i <= nombre.Length)
+                    {
+                        textBox.Text = nombre.Substring(i - 1, 1);
+
+                        // da color de en las pociciones pares del textbox
+                        if (i % 2 == 0)
+                        {
+                            // da color de manera aleatoria en el textbox
+                            textBox.BackColor = colorAleatorio;
+                        }
+                    }
+                }
+            }
+
+            //da a las casillas los colores normales
+
+            for (int i = nombre.Length + 1; i <= 10; i++)
+            {
+                string textBoxName = "textBox" + i;
+                TextBox textBox = Controls.Find(textBoxName, true).FirstOrDefault() as TextBox;
+
+                if (textBox != null)
+                {
+                    textBox.BackColor = SystemColors.Window;
+                }
+            }
+
+            this.lblNombre.Text = $"Nombre Selecionado es. {arrayNombres[indiceAleatorio]}";
         }
 
     }
+       
+    
 }
