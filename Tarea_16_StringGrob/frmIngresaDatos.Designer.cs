@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtGuardarArchivo = new System.Windows.Forms.TextBox();
             this.btnCargar = new System.Windows.Forms.Button();
+            this.txtGuardarArchivo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbldatosg = new System.Windows.Forms.Label();
             this.txtTextoPorGuardar = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -51,22 +51,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccione la ruta donde se guardará su archivo";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre del archivo";
-            // 
-            // txtGuardarArchivo
-            // 
-            this.txtGuardarArchivo.Location = new System.Drawing.Point(160, 30);
-            this.txtGuardarArchivo.Name = "txtGuardarArchivo";
-            this.txtGuardarArchivo.Size = new System.Drawing.Size(340, 20);
-            this.txtGuardarArchivo.TabIndex = 1;
-            // 
             // btnCargar
             // 
             this.btnCargar.Location = new System.Drawing.Point(525, 28);
@@ -76,6 +60,22 @@
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
+            // txtGuardarArchivo
+            // 
+            this.txtGuardarArchivo.Location = new System.Drawing.Point(160, 30);
+            this.txtGuardarArchivo.Name = "txtGuardarArchivo";
+            this.txtGuardarArchivo.Size = new System.Drawing.Size(340, 20);
+            this.txtGuardarArchivo.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre del archivo";
             // 
             // lbldatosg
             // 
@@ -101,7 +101,7 @@
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
-            
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // btnCerrar
             // 

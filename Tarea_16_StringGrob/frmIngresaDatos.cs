@@ -62,8 +62,12 @@ namespace Tarea_16_StringGrob
             // Hace que la cadena retorne vacia
             return string.Empty;
         }
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-        private void btnguardar_Click(object sender, EventArgs e)
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(rutaArchivo))
             {
@@ -84,13 +88,6 @@ namespace Tarea_16_StringGrob
             {
                 MessageBox.Show("Por favor selecciona un archivo para guardar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-      
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
