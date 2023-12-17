@@ -86,10 +86,7 @@ namespace Tarea_16_StringGrob
             }
         }
 
-        private void btnGuardar_Click_1(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
