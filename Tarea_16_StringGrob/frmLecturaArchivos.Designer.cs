@@ -123,7 +123,7 @@
             // 
             // txtCaracterUsuario
             // 
-            this.txtCaracterUsuario.Location = new System.Drawing.Point(163, 209);
+            this.txtCaracterUsuario.Location = new System.Drawing.Point(145, 205);
             this.txtCaracterUsuario.Name = "txtCaracterUsuario";
             this.txtCaracterUsuario.Size = new System.Drawing.Size(58, 20);
             this.txtCaracterUsuario.TabIndex = 5;
