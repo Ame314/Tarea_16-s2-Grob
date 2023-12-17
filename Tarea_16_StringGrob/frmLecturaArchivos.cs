@@ -147,6 +147,11 @@ namespace Tarea_16_StringGrob
             Color.LightSalmon,
             Color.LightSkyBlue
         };
+
+        private void txtArchivos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     
