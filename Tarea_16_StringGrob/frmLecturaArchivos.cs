@@ -114,6 +114,7 @@ namespace Tarea_16_StringGrob
                         textBox.ForeColor = Color.Blue;
                     }
 
+                    // Agregar el TextBox al formulario
                     Controls.Add(textBox);
                 }
 
@@ -127,8 +128,8 @@ namespace Tarea_16_StringGrob
 
         private void LimpiarTextBoxes()
         {
-            // Elimina los TextBoxes existentes del formulario
-            foreach (var control in Controls.OfType<TextBox>().ToArray())
+            // Elimina los TextBoxes existentes del formulario, excepto txtLetra
+            foreach (var control in Controls.OfType<TextBox>().Where(c => c.Name != "txtLetra").ToArray())
             {
                 Controls.Remove(control);
                 control.Dispose();
@@ -148,10 +149,12 @@ namespace Tarea_16_StringGrob
             Color.LightSkyBlue
         };
 
-        private void txtArchivos_TextChanged(object sender, EventArgs e)
+
+        private void frmLecturaArchivos_Load(object sender, EventArgs e)
         {
 
         }
+
     }
 }
     

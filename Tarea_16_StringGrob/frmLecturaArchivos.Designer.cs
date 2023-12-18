@@ -70,7 +70,7 @@
             this.txtArchivos.Name = "txtArchivos";
             this.txtArchivos.Size = new System.Drawing.Size(610, 27);
             this.txtArchivos.TabIndex = 1;
-            this.txtArchivos.TextChanged += new System.EventHandler(this.txtArchivos_TextChanged);
+           
             // 
             // label1
             // 
@@ -125,6 +125,7 @@
             this.label2.Size = new System.Drawing.Size(101, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Ingresa una Letra:";
+            
             // 
             // txtCaracterUsuario
             // 
@@ -149,6 +150,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmLecturaArchivos";
             this.Text = "frmLecturaArchivos";
+            this.Load += new System.EventHandler(this.frmLecturaArchivos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
