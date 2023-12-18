@@ -80,7 +80,7 @@
             // lbldatosg
             // 
             this.lbldatosg.AutoSize = true;
-            this.lbldatosg.Location = new System.Drawing.Point(60, 199);
+            this.lbldatosg.Location = new System.Drawing.Point(62, 160);
             this.lbldatosg.Name = "lbldatosg";
             this.lbldatosg.Size = new System.Drawing.Size(205, 13);
             this.lbldatosg.TabIndex = 1;
@@ -88,14 +88,14 @@
             // 
             // txtTextoPorGuardar
             // 
-            this.txtTextoPorGuardar.Location = new System.Drawing.Point(63, 224);
+            this.txtTextoPorGuardar.Location = new System.Drawing.Point(65, 185);
             this.txtTextoPorGuardar.Name = "txtTextoPorGuardar";
             this.txtTextoPorGuardar.Size = new System.Drawing.Size(287, 20);
             this.txtTextoPorGuardar.TabIndex = 2;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(372, 221);
+            this.btnGuardar.Location = new System.Drawing.Point(374, 182);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 3;
@@ -105,7 +105,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(63, 345);
+            this.btnCerrar.Location = new System.Drawing.Point(677, 397);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 23);
             this.btnCerrar.TabIndex = 4;
