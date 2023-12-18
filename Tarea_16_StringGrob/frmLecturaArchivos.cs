@@ -21,6 +21,7 @@ namespace Tarea_16_StringGrob
 
         private void btnCargarArchivo_Click(object sender, EventArgs e)
         {
+           
             var openFileDialog1 = new OpenFileDialog
             {
                 InitialDirectory = Environment.SpecialFolder.MyDocuments.ToString(),
