@@ -129,8 +129,8 @@ namespace Tarea_16_StringGrob
 
         private void LimpiarTextBoxes()
         {
-            // Elimina los TextBoxes existentes del formulario, excepto txtLetra
-            foreach (var control in Controls.OfType<TextBox>().Where(c => c.Name != "txtLetra").ToArray())
+            // Elimina los TextBoxes existentes del formulario, excepto txtCaracterUsuario
+            foreach (var control in Controls.OfType<TextBox>().Where(c => c != txtCaracterUsuario).ToArray())
             {
                 Controls.Remove(control);
                 control.Dispose();
