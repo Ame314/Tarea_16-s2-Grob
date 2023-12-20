@@ -153,7 +153,7 @@ namespace Tarea_16_StringGrob
 
         private void frmLecturaArchivos_Load(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
         }
 
     }

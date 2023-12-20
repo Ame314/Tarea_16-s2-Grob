@@ -126,10 +126,33 @@ namespace Tarea_16_StringGrob
             {
                 int indiceAleatorio = GeneraAleatorios(totalElementos);
                 this.lblPalabra.Text = arrayPalabras[indiceAleatorio];
+                MustraFrase(this.lblPalabra.Text);
             }
             else
             {
                 MessageBox.Show("No hay palabras cargadas. Abra una categoría primero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void MustraFrase(string frase)
+        {
+            this.groupBoxFraseAdivinar.Controls.Clear();
+            TextBox[] palabras =new TextBox[frase.Length];
+            int cont =0, x=15,y=27;    
+
+            foreach(char c in frase )
+            {
+                palabras[cont] = new TextBox();
+                palabras[cont].Size = new Size(80, 100);
+                palabras[cont].TextAlign = HorizontalAlignment.Center;
+                palabras[cont].MaxLength = 1;
+                palabras[cont].Multiline = true;
+                palabras[cont].ReadOnly = true;
+                Font fuente = new Font("Calibrí", 18);
+                palabras[cont].Font = fuente;
+                palabras[cont].Text = c.ToString();
+                palabras[cont].Location = new Point(x, y);
+                x += 82;
+                this.groupBoxFraseAdivinar.Controls.Add(palabras[cont]);
             }
         }
         private void LimpiarJuegoAnterior()

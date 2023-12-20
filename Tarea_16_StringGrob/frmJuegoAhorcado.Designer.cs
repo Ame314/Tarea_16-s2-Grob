@@ -53,6 +53,7 @@
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblPalabra = new System.Windows.Forms.Label();
+            this.groupBoxFraseAdivinar = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -186,7 +187,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Script MT Bold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(575, 27);
+            this.groupBox2.Location = new System.Drawing.Point(960, 27);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(149, 74);
             this.groupBox2.TabIndex = 3;
@@ -233,9 +234,10 @@
             this.menúToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1189, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
+      
             // 
             // menúToolStripMenuItem
             // 
@@ -252,35 +254,35 @@
             // nombresPropiosToolStripMenuItem
             // 
             this.nombresPropiosToolStripMenuItem.Name = "nombresPropiosToolStripMenuItem";
-            this.nombresPropiosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nombresPropiosToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.nombresPropiosToolStripMenuItem.Text = "Nombres propios";
             this.nombresPropiosToolStripMenuItem.Click += new System.EventHandler(this.nombresPropiosToolStripMenuItem_Click);
             // 
             // ciudadesToolStripMenuItem
             // 
             this.ciudadesToolStripMenuItem.Name = "ciudadesToolStripMenuItem";
-            this.ciudadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ciudadesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.ciudadesToolStripMenuItem.Text = "Ciudades";
             this.ciudadesToolStripMenuItem.Click += new System.EventHandler(this.ciudadesToolStripMenuItem_Click);
             // 
             // animalesToolStripMenuItem
             // 
             this.animalesToolStripMenuItem.Name = "animalesToolStripMenuItem";
-            this.animalesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.animalesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.animalesToolStripMenuItem.Text = "Animales";
             this.animalesToolStripMenuItem.Click += new System.EventHandler(this.animalesToolStripMenuItem_Click);
             // 
             // nuevoJuegoToolStripMenuItem
             // 
             this.nuevoJuegoToolStripMenuItem.Name = "nuevoJuegoToolStripMenuItem";
-            this.nuevoJuegoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoJuegoToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.nuevoJuegoToolStripMenuItem.Text = "Nuevo juego";
             this.nuevoJuegoToolStripMenuItem.Click += new System.EventHandler(this.nuevoJuegoToolStripMenuItem_Click);
             // 
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.cerrarToolStripMenuItem.Text = "Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
@@ -288,7 +290,7 @@
             // 
             this.groupBox3.Controls.Add(this.lblPalabra);
             this.groupBox3.Font = new System.Drawing.Font("Script MT Bold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(575, 107);
+            this.groupBox3.Location = new System.Drawing.Point(960, 116);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(149, 100);
             this.groupBox3.TabIndex = 5;
@@ -304,11 +306,21 @@
             this.lblPalabra.TabIndex = 0;
             this.lblPalabra.Text = "Palabra";
             // 
+            // groupBoxFraseAdivinar
+            // 
+            this.groupBoxFraseAdivinar.Location = new System.Drawing.Point(12, 88);
+            this.groupBoxFraseAdivinar.Name = "groupBoxFraseAdivinar";
+            this.groupBoxFraseAdivinar.Size = new System.Drawing.Size(906, 81);
+            this.groupBoxFraseAdivinar.TabIndex = 6;
+            this.groupBoxFraseAdivinar.TabStop = false;
+            this.groupBoxFraseAdivinar.Text = "Palabras por adividar";
+            // 
             // frmJuegoAhorcado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 550);
+            this.ClientSize = new System.Drawing.Size(1189, 550);
+            this.Controls.Add(this.groupBoxFraseAdivinar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox2);
@@ -365,5 +377,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.GroupBox groupBoxFraseAdivinar;
     }
 }
