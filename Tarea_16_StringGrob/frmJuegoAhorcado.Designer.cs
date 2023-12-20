@@ -54,6 +54,9 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblPalabra = new System.Windows.Forms.Label();
             this.groupBoxFraseAdivinar = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLetra = new System.Windows.Forms.TextBox();
+            this.btnValidar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -237,7 +240,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1189, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
-      
             // 
             // menúToolStripMenuItem
             // 
@@ -315,11 +317,42 @@
             this.groupBoxFraseAdivinar.TabStop = false;
             this.groupBoxFraseAdivinar.Text = "Palabras por adividar";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(481, 203);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Ingresa una letras";
+            // 
+            // txtLetra
+            // 
+            this.txtLetra.Location = new System.Drawing.Point(484, 228);
+            this.txtLetra.MaxLength = 1;
+            this.txtLetra.Multiline = true;
+            this.txtLetra.Name = "txtLetra";
+            this.txtLetra.Size = new System.Drawing.Size(100, 20);
+            this.txtLetra.TabIndex = 8;
+            this.txtLetra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnValidar
+            // 
+            this.btnValidar.Location = new System.Drawing.Point(626, 226);
+            this.btnValidar.Name = "btnValidar";
+            this.btnValidar.Size = new System.Drawing.Size(75, 23);
+            this.btnValidar.TabIndex = 9;
+            this.btnValidar.Text = "Validar";
+            this.btnValidar.UseVisualStyleBackColor = true;
+            // 
             // frmJuegoAhorcado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1189, 550);
+            this.Controls.Add(this.btnValidar);
+            this.Controls.Add(this.txtLetra);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBoxFraseAdivinar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.menuStrip1);
@@ -378,5 +411,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.GroupBox groupBoxFraseAdivinar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtLetra;
+        private System.Windows.Forms.Button btnValidar;
     }
 }
