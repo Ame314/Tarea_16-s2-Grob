@@ -41,6 +41,7 @@ namespace Tarea_16_StringGrob
         {
             arrayPalabras = new string[MAX];
             int conteo = 0;
+            totalElementos = 0; // Restablecer el contador
 
             try
             {
@@ -68,6 +69,20 @@ namespace Tarea_16_StringGrob
         private void nombresPropiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string categoria = "Nombres propios";
+            MuestraCategoria(categoria);
+            SeleccionarArchivo();
+        }
+
+        private void animalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string categoria = "Animales";
+            MuestraCategoria(categoria);
+            SeleccionarArchivo();
+        }
+
+        private void ciudadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string categoria = "Ciudades";
             MuestraCategoria(categoria);
             SeleccionarArchivo();
         }
@@ -106,6 +121,8 @@ namespace Tarea_16_StringGrob
 
         private void nuevoJuegoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            LimpiarJuegoAnterior(); // Agrega este método para limpiar los recursos del juego anterior
+
             if (totalElementos > 0)
             {
                 int indiceAleatorio = GeneraAleatorios(totalElementos);
@@ -116,37 +133,12 @@ namespace Tarea_16_StringGrob
                 MessageBox.Show("No hay palabras cargadas. Abra una categoría primero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void AjustarPosicionImagenes()
+        private void LimpiarJuegoAnterior()
         {
-            int x = 21;
-            int y = 54;
+            // Restablecer variables y limpiar controles aquí
+            this.lblPalabra.Text = string.Empty;
 
-            foreach (var pictureBox in pictureBoxes)
-            {
-                pictureBox.Location = new System.Drawing.Point(x, y);
-                x += 118;
-
-                if (x > 350)
-                {
-                    x = 21;
-                    y += 103;
-                }
-            }
         }
 
-        private void animalesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string categoria = "Animales";
-            MuestraCategoria(categoria);
-            SeleccionarArchivo();
-        }
-
-        private void ciudadesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string categoria = "Ciudades";
-            MuestraCategoria(categoria);
-            SeleccionarArchivo();
-        }
     }
 }
