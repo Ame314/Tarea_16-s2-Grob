@@ -344,6 +344,7 @@
             this.btnValidar.TabIndex = 9;
             this.btnValidar.Text = "Validar";
             this.btnValidar.UseVisualStyleBackColor = true;
+            this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
             // 
             // frmJuegoAhorcado
             // 
@@ -362,6 +363,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmJuegoAhorcado";
             this.Text = "Juego del Ahorcado";
+            this.Load += new System.EventHandler(this.frmJuegoAhorcado_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();

@@ -19,6 +19,7 @@ namespace Tarea_16_StringGrob
         private const int MAX = 1000;
         private string[] arrayPalabras;
         private int totalElementos = 0;
+        TextBox[] palabras;
         private PictureBox[] pictureBoxes;//para poder usar las imágenes para el muñequito de ahorcado
 
         public frmJuegoAhorcado()
@@ -127,6 +128,7 @@ namespace Tarea_16_StringGrob
                 int indiceAleatorio = GeneraAleatorios(totalElementos);
                 this.lblPalabra.Text = arrayPalabras[indiceAleatorio];
                 MustraFrase(this.lblPalabra.Text);
+                this.groupBoxFraseAdivinar.Text = $"Frase a adivinar : {this.lblPalabra.Text}";
             }
             else
             {
@@ -136,23 +138,25 @@ namespace Tarea_16_StringGrob
         private void MustraFrase(string frase)
         {
             this.groupBoxFraseAdivinar.Controls.Clear();
-            TextBox[] palabras =new TextBox[frase.Length];
+            palabras =new TextBox[frase.Length];
             int cont =0, x=15,y=27;    
 
             foreach(char c in frase )
             {
                 palabras[cont] = new TextBox();
-                palabras[cont].Size = new Size(80, 100);
+                palabras[cont].Size = new Size(80, 100);//tamaño del textbox
                 palabras[cont].TextAlign = HorizontalAlignment.Center;
                 palabras[cont].MaxLength = 1;
                 palabras[cont].Multiline = true;
                 palabras[cont].ReadOnly = true;
-                Font fuente = new Font("Calibrí", 18);
+                Font fuente = new Font("Calibrí", 18);//Fuente de la letra para el texbox
                 palabras[cont].Font = fuente;
-                palabras[cont].Text = c.ToString();
-                palabras[cont].Location = new Point(x, y);
+                palabras[cont].Text = "";
+                palabras[cont].Tag = c.ToString();//letra que guarda para adivinar, mustra datos asicionales
+                palabras[cont].Location = new Point(x, y);//localización, donde se va a ubicar el textbox, x y
                 x += 82;
                 this.groupBoxFraseAdivinar.Controls.Add(palabras[cont]);
+                cont++;
             }
         }
         private void LimpiarJuegoAnterior()
@@ -162,5 +166,24 @@ namespace Tarea_16_StringGrob
 
         }
 
+        private void btnValidar_Click(object sender, EventArgs e)
+        {
+            if (this.txtLetra.Text.Length > 0)
+            {
+                for (int i = 0; i < palabras.Length; i++)
+                {
+                    if (palabras[i].Tag.ToString().ToUpper() == this.txtLetra.Text.ToString().ToUpper())
+                    {
+                        palabras[i].Text = palabras[i].Text.ToUpper();
+                    }
+                }
+            }
+        }
+
+        private void frmJuegoAhorcado_Load(object sender, EventArgs e)
+        {
+           this.WindowState = FormWindowState.Maximized;
+        }
+        
     }
 }
