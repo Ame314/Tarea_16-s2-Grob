@@ -8,40 +8,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using System.Drawing.Text;
 
 namespace Tarea_16_StringGrob
 {
     
-
+    //Tarea 17- juego del ahorcado- equipo Eliana Lucas y Amelie Grob
     public partial class frmJuegoAhorcado : Form
     {
         private const int MAX = 1000;
         private string[] arrayPalabras;
         private int totalElementos = 0;
-        private PictureBox[] pictureBoxes;
+        private PictureBox[] pictureBoxes;//para poder usar las imágenes para el muñequito de ahorcado
 
         public frmJuegoAhorcado()
         {
             InitializeComponent();
-            pictureBoxes = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9 };
+            pictureBoxes = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7 };//Para realizar y acomodar los picture box, esta actividad supongo que es para la siguiente clase
         }
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit();//cierra todas las ventanas abiertas
         }
 
         private void MuestraCategoria(string categoria)
         {
             this.lblCategoria.Text = categoria;
         }
-        private void LeerArchivoTexto(string nombreArchivo)
+        private void LeerArchivoTexto(string nombreArchivo)//Lee archivos de texto ingresado por selecciona archivo
         {
             arrayPalabras = new string[MAX];
             int conteo = 0;
-            totalElementos = 0; // Restablecer el contador
+            totalElementos = 0; // Restablecer el contador, este es importante, ya que sin este se crean vacios en la ejecución  
 
             try
             {
@@ -68,26 +67,26 @@ namespace Tarea_16_StringGrob
 
         private void nombresPropiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string categoria = "Nombres propios";
+            string categoria = "Nombres propios";//Cambia el lblCategorias a nombres propios
             MuestraCategoria(categoria);
-            SeleccionarArchivo();
+            SeleccionarArchivo();//selecciona el archivo correspondiente
         }
 
         private void animalesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string categoria = "Animales";
+            string categoria = "Animales";//Cambia el lblCategorias a animalse
             MuestraCategoria(categoria);
-            SeleccionarArchivo();
+            SeleccionarArchivo();//selecciona el archivo correspondiente
         }
 
         private void ciudadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string categoria = "Ciudades";
+            string categoria = "Ciudades";//Cambia el lblCategorias a ciudades
             MuestraCategoria(categoria);
-            SeleccionarArchivo();
+            SeleccionarArchivo();//selecciona el archivo correspondiente
         }
 
-        private void SeleccionarArchivo()
+        private void SeleccionarArchivo()//Selecciona los archivos correspondientes para cada categoría
         {
             var openFileDialog1 = new OpenFileDialog
             {
@@ -109,7 +108,7 @@ namespace Tarea_16_StringGrob
                 LeerArchivoTexto(nombreArchivos);
             }
         }
-        private int GeneraAleatorios(int totalElementos)
+        private int GeneraAleatorios(int totalElementos)//genera los aleatorios que posteriormente será la palabra que hya que adivinar
         {
             var seed = Environment.TickCount;
             var random = new Random(seed);
