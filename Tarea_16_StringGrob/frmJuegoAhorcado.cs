@@ -19,6 +19,7 @@ namespace Tarea_16_StringGrob
         private const int MAX = 1000;
         private string[] arrayPalabras;
         private int totalElementos = 0;
+        private int errores = 0;
         TextBox[] palabras;
         private PictureBox[] pictureBoxes;//para poder usar las imágenes para el muñequito de ahorcado
 
@@ -26,6 +27,7 @@ namespace Tarea_16_StringGrob
         {
             InitializeComponent();
             pictureBoxes = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7 };//Para realizar y acomodar los picture box, esta actividad supongo que es para la siguiente clase
+           
         }
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -137,6 +139,7 @@ namespace Tarea_16_StringGrob
         }
         private void MustraFrase(string frase)
         {
+           
             this.groupBoxFraseAdivinar.Controls.Clear();
             palabras =new TextBox[frase.Length];
             int cont =0, x=15,y=27;    
@@ -152,7 +155,7 @@ namespace Tarea_16_StringGrob
                 Font fuente = new Font("Calibrí", 18);//Fuente de la letra para el texbox
                 palabras[cont].Font = fuente;
                 palabras[cont].Text = "";
-                palabras[cont].Tag = c.ToString();//letra que guarda para adivinar, mustra datos asicionales
+                palabras[cont].Tag = c.ToString();//letra que guarda para adivinar, muestra datos asicionales
                 palabras[cont].Location = new Point(x, y);//localización, donde se va a ubicar el textbox, x y
                 x += 82;
                 this.groupBoxFraseAdivinar.Controls.Add(palabras[cont]);
@@ -163,19 +166,42 @@ namespace Tarea_16_StringGrob
         {
             // Restablecer variables y limpiar controles aquí
             this.lblPalabra.Text = string.Empty;
+            errores = 0;
+            foreach (var pictureBox in pictureBoxes)
+            {
+                pictureBox.Image = Properties.Resources.Ahorcado_vacio; // La imagen por defecto
+            }
 
+        }
+
+        private void MostrarImagenAhorcado()
+        {
+            if (errores < pictureBoxes.Length)
+            {
+                pictureBoxes[errores].Image = Properties.Resources.ResourceManager.GetObject($"Ahorcado-0{errores + 1}") as Image;
+                errores++;
+            }
         }
 
         private void btnValidar_Click(object sender, EventArgs e)
         {
             if (this.txtLetra.Text.Length > 0)
             {
+                bool letraEncontrada = false;
+
                 for (int i = 0; i < palabras.Length; i++)
                 {
                     if (palabras[i].Tag.ToString().ToUpper() == this.txtLetra.Text.ToString().ToUpper())
                     {
-                        palabras[i].Text = palabras[i].Text.ToUpper();
+                        palabras[i].Text = this.txtLetra.Text.ToUpper();
+                        letraEncontrada = true;
                     }
+                }
+
+                if (!letraEncontrada)
+                {
+                    // La letra no está en la palabra, mostrar imagen del ahorcado
+                    MostrarImagenAhorcado();
                 }
             }
         }

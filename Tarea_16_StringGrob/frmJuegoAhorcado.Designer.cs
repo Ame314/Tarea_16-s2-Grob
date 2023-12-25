@@ -93,7 +93,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_07;
+            this.pictureBox7.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_vacio;
             this.pictureBox7.Location = new System.Drawing.Point(257, 260);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(112, 91);
@@ -103,7 +103,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_vacio;
-            this.pictureBox8.Location = new System.Drawing.Point(139, 260);
+            this.pictureBox8.Location = new System.Drawing.Point(139, 155);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(112, 97);
             this.pictureBox8.TabIndex = 7;
@@ -111,8 +111,8 @@
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_01;
-            this.pictureBox9.Location = new System.Drawing.Point(21, 260);
+            this.pictureBox9.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_vacio;
+            this.pictureBox9.Location = new System.Drawing.Point(139, 260);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(112, 97);
             this.pictureBox9.TabIndex = 6;
@@ -120,8 +120,8 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_06;
-            this.pictureBox4.Location = new System.Drawing.Point(257, 157);
+            this.pictureBox4.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_vacio;
+            this.pictureBox4.Location = new System.Drawing.Point(139, 52);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(112, 97);
             this.pictureBox4.TabIndex = 5;
@@ -130,7 +130,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_vacio;
-            this.pictureBox5.Location = new System.Drawing.Point(139, 157);
+            this.pictureBox5.Location = new System.Drawing.Point(257, 52);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(112, 97);
             this.pictureBox5.TabIndex = 4;
@@ -138,8 +138,8 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_02;
-            this.pictureBox6.Location = new System.Drawing.Point(21, 157);
+            this.pictureBox6.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_vacio;
+            this.pictureBox6.Location = new System.Drawing.Point(257, 157);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(112, 97);
             this.pictureBox6.TabIndex = 3;
@@ -147,8 +147,8 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_05;
-            this.pictureBox3.Location = new System.Drawing.Point(257, 54);
+            this.pictureBox3.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_vacio;
+            this.pictureBox3.Location = new System.Drawing.Point(21, 52);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(112, 97);
             this.pictureBox3.TabIndex = 2;
@@ -156,8 +156,8 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_04;
-            this.pictureBox2.Location = new System.Drawing.Point(139, 54);
+            this.pictureBox2.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_vacio;
+            this.pictureBox2.Location = new System.Drawing.Point(21, 155);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(112, 99);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -166,8 +166,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_03;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 54);
+            this.pictureBox1.Image = global::Tarea_16_StringGrob.Properties.Resources.Ahorcado_vacio;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 260);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(112, 97);
             this.pictureBox1.TabIndex = 0;
