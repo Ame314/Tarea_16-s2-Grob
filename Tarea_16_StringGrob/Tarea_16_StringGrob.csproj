@@ -179,5 +179,26 @@
   <ItemGroup>
     <None Include="Resources\Ahorcado-vacio.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ahorcado-007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ahorcado-006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ahorcado-005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ahorcado-004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ahorcado-001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ahorcado-002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ahorcado-003.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

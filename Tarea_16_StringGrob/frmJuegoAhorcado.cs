@@ -163,7 +163,7 @@ namespace Tarea_16_StringGrob
                 int indiceAleatorio = GeneraAleatorios(totalElementos);
                 this.lblPalabra.Text = arrayPalabras[indiceAleatorio];
                 MustraFrase(this.lblPalabra.Text);
-                this.groupBoxFraseAdivinar.Text = $"Frase a adivinar: {this.lblPalabra.Text}";
+                this.groupBoxFraseAdivinar.Text = "Frase a adivinar:";
 
                 // Guardar información del juego en un archivo de texto
                 GuardarInformacionJuego();
@@ -217,12 +217,12 @@ namespace Tarea_16_StringGrob
             foreach (char c in frase)
             {
                 palabras[cont] = new TextBox();
-                palabras[cont].Size = new Size(80, 100);//tamaño del textbox
+                palabras[cont].Size = new Size(80, 80);//tamaño del textbox
                 palabras[cont].TextAlign = HorizontalAlignment.Center;
                 palabras[cont].MaxLength = 1;
                 palabras[cont].Multiline = true;
                 palabras[cont].ReadOnly = true;
-                Font fuente = new Font("Calibrí", 16);//Fuente de la letra para el texbox
+                Font fuente = new Font("Segoe Script", 20);//Fuente de la letra para el texbox
                 palabras[cont].Font = fuente;
                 palabras[cont].Text = "";
                 palabras[cont].Tag = c.ToString();//letra que guarda para adivinar, muestra datos adicionales
@@ -248,12 +248,12 @@ namespace Tarea_16_StringGrob
         {
             if (errores < pictureBoxes.Length)
             {
-                pictureBoxes[errores].Image = Properties.Resources.ResourceManager.GetObject($"Ahorcado-0{errores + 1}") as Image;
+                pictureBoxes[errores].Image = Properties.Resources.ResourceManager.GetObject($"Ahorcado-00{errores + 1}") as Image;
                 errores++;
 
                 if (errores == pictureBoxes.Length)
                 {
-                    MessageBox.Show("¡Perdiste :(", "Perdedor", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show($"¡Perdiste :( la palabra correcta era : {this.lblPalabra.Text}", "Perdedor", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtErrores.Text = $"{puntoError++}";
                     GuardarInformacionJuego();
                 }
@@ -313,6 +313,8 @@ namespace Tarea_16_StringGrob
         {
             this.WindowState = FormWindowState.Maximized;
             PedirNombreJugador();
+            // Ocultar el control GroupBox3 al cargar el formulario
+            groupBox3.Visible = false;
 
         }
         private void PedirNombreJugador()
@@ -382,6 +384,11 @@ namespace Tarea_16_StringGrob
             {
                 MessageBox.Show($"Error al leer la información del juego: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void lblPalabra_Click(object sender, EventArgs e)
+        {
+
         }
     }
         
