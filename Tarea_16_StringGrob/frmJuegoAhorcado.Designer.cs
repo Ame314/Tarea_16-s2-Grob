@@ -51,6 +51,7 @@
             this.animalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoJuegoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.puntuacionesDelJuegoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblPalabra = new System.Windows.Forms.Label();
             this.groupBoxFraseAdivinar = new System.Windows.Forms.GroupBox();
@@ -248,7 +249,8 @@
             this.ciudadesToolStripMenuItem,
             this.animalesToolStripMenuItem,
             this.nuevoJuegoToolStripMenuItem,
-            this.cerrarToolStripMenuItem});
+            this.cerrarToolStripMenuItem,
+            this.puntuacionesDelJuegoToolStripMenuItem});
             this.menúToolStripMenuItem.Name = "menúToolStripMenuItem";
             this.menúToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menúToolStripMenuItem.Text = "Menú";
@@ -256,37 +258,44 @@
             // nombresPropiosToolStripMenuItem
             // 
             this.nombresPropiosToolStripMenuItem.Name = "nombresPropiosToolStripMenuItem";
-            this.nombresPropiosToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.nombresPropiosToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.nombresPropiosToolStripMenuItem.Text = "Nombres propios";
-            this.nombresPropiosToolStripMenuItem.Click += new System.EventHandler(this.nombresPropiosToolStripMenuItem_Click);
+            this.nombresPropiosToolStripMenuItem.Click += new System.EventHandler(this.nombresPropiosToolStripMenuItem_Click_1);
             // 
             // ciudadesToolStripMenuItem
             // 
             this.ciudadesToolStripMenuItem.Name = "ciudadesToolStripMenuItem";
-            this.ciudadesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.ciudadesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.ciudadesToolStripMenuItem.Text = "Ciudades";
-            this.ciudadesToolStripMenuItem.Click += new System.EventHandler(this.ciudadesToolStripMenuItem_Click);
+            this.ciudadesToolStripMenuItem.Click += new System.EventHandler(this.ciudadesToolStripMenuItem_Click_1);
             // 
             // animalesToolStripMenuItem
             // 
             this.animalesToolStripMenuItem.Name = "animalesToolStripMenuItem";
-            this.animalesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.animalesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.animalesToolStripMenuItem.Text = "Animales";
-            this.animalesToolStripMenuItem.Click += new System.EventHandler(this.animalesToolStripMenuItem_Click);
+            this.animalesToolStripMenuItem.Click += new System.EventHandler(this.animalesToolStripMenuItem_Click_1);
             // 
             // nuevoJuegoToolStripMenuItem
             // 
             this.nuevoJuegoToolStripMenuItem.Name = "nuevoJuegoToolStripMenuItem";
-            this.nuevoJuegoToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.nuevoJuegoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.nuevoJuegoToolStripMenuItem.Text = "Nuevo juego";
             this.nuevoJuegoToolStripMenuItem.Click += new System.EventHandler(this.nuevoJuegoToolStripMenuItem_Click);
             // 
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.cerrarToolStripMenuItem.Text = "Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
+            // 
+            // puntuacionesDelJuegoToolStripMenuItem
+            // 
+            this.puntuacionesDelJuegoToolStripMenuItem.Name = "puntuacionesDelJuegoToolStripMenuItem";
+            this.puntuacionesDelJuegoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.puntuacionesDelJuegoToolStripMenuItem.Text = "Puntuaciones del Juego";
+            this.puntuacionesDelJuegoToolStripMenuItem.Click += new System.EventHandler(this.puntuacionesDelJuegoToolStripMenuItem_Click);
             // 
             // groupBox3
             // 
@@ -416,5 +425,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtLetra;
         private System.Windows.Forms.Button btnValidar;
+        private System.Windows.Forms.ToolStripMenuItem puntuacionesDelJuegoToolStripMenuItem;
     }
 }
