@@ -1,0 +1,7 @@
+Tarea 17:  1.8/2
+Las imágenes deben estar más agrupadas(cercanas), para que el usuario la perciba como una única imagen.
+
+
+Tarea 18: 1.7/2
+Se muestra el mensaje "El archivo no tiene el formato correcto" pero luego se muestra un error en tiempo de ejecución.
+Las puntuaciones se deben guardar en un archivo independiente por cada jugador.
